@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="seller.sellerLogin">
+
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="serif"
+        android:text="LOGIN"
+        android:textColor="#0B0202"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/phonetxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="30dp"
+        android:text="Phone No"
+        android:textColor="#171414"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inputphonelogin"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/input_design"
+        android:inputType="phone"
+        android:minHeight="48dp"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintStart_toStartOf="@+id/phonetxt"
+        app:layout_constraintTop_toBottomOf="@+id/phonetxt"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Password"
+        android:textColor="#171414"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/inputphonelogin"
+        app:layout_constraintTop_toBottomOf="@+id/inputphonelogin" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/inputpasswordlogin"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/input_design"
+        android:minHeight="48dp"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintStart_toStartOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/loginbtn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:textSize="20sp"
+        android:background="@drawable/input_design"
+        android:text="LOGIN"
+        app:backgroundTint="#E675AA"
+        app:layout_constraintStart_toStartOf="@+id/inputpasswordlogin"
+        app:layout_constraintTop_toBottomOf="@+id/inputpasswordlogin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
