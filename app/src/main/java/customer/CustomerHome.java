@@ -57,10 +57,12 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.dbmsproject.ApiLink;
 import com.example.dbmsproject.databinding.FragmentCustomerHomeBinding;
 
 import java.util.ArrayList;
@@ -69,8 +71,8 @@ import Product.ProductModel;
 
 public class CustomerHome extends Fragment {
     MYAdapter adapter;
-    private static final String apiurl1 = "http://192.168.44.208/api/Trigger1.php";
-    private static final String apiurl2 = "http://192.168.44.208/api/Trigger2.php";
+    static String link= ApiLink.link;
+
     FragmentCustomerHomeBinding binding;
     ArrayList<ProductModel> list=new ArrayList<>();
 
@@ -84,29 +86,34 @@ public class CustomerHome extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentCustomerHomeBinding.inflate(inflater, container, false);
-        binding.RV1.setLayoutManager(new LinearLayoutManager(getActivity()));
-        adapter = new MYAdapter(getContext());
-        binding.RV1.setAdapter(adapter);
+
+        String phno = getArguments().getString("phno");
+        String pass=getArguments().getString("pass");
+        Log.d("pooooo",phno);
         binding.Profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                goToActivity();
+                Intent intent=new Intent(getContext(),CustomerProfile.class);
+                intent.putExtra("phno",phno);
+                intent.putExtra("pass",pass);
+                startActivity(intent);
             }
         });
+        binding.RV1.setLayoutManager(new LinearLayoutManager(getActivity()));
+        adapter = new MYAdapter(getContext());
+        binding.RV1.setAdapter(adapter);
+
+
         binding.BackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Trigger1Async triggerManager = new Trigger1Async(apiurl1,getContext());
-                triggerManager.execute();
+//                Trigger1Async triggerManager = new Trigger1Async(apiurl1,getContext());
+//                triggerManager.execute();
+                Intent intent=new Intent(getContext(),Query.class);
+                startActivity(intent);
             }
         });
-        binding.DeliveredOrders.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Trigger2Async trigger2Async = new Trigger2Async(apiurl2,getContext());
-                trigger2Async.execute();
-            }
-        });
+
         return binding.getRoot();
     }
 
@@ -116,9 +123,10 @@ public class CustomerHome extends Fragment {
         }
     }
     // Inside your Fragment class
-    public void goToActivity() {
-        Intent intent = new Intent(getActivity(), CustomerProfile.class);
-        startActivity(intent);
-    }
+//    public void goToActivity() {
+//        Intent intent = new Intent(getActivity(), CustomerProfile.class);
+//        startActivity(intent);
+//    }
+
 
 }

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="seller.addProduct">
+
+    <EditText
+        android:id="@+id/pname"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="50dp"
+        android:hint="Enter Product Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/pprice"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="30dp"
+        android:hint="Enter Product Price"
+        app:layout_constraintEnd_toEndOf="@id/pname"
+        app:layout_constraintStart_toStartOf="@id/pname"
+        app:layout_constraintTop_toBottomOf="@id/pname" />
+
+    <EditText
+        android:id="@+id/pquantity"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="30dp"
+        android:hint="Enter Product Quantity"
+        app:layout_constraintEnd_toEndOf="@id/pprice"
+        app:layout_constraintStart_toStartOf="@id/pprice"
+        app:layout_constraintTop_toBottomOf="@id/pprice" />
+
+    <EditText
+        android:id="@+id/pcategory"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="30dp"
+        android:hint="Enter Product Category"
+        app:layout_constraintEnd_toEndOf="@id/pquantity"
+        app:layout_constraintStart_toStartOf="@id/pquantity"
+        app:layout_constraintTop_toBottomOf="@id/pquantity" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Add Product"
+        app:backgroundTint="#24CB12"
+        app:layout_constraintEnd_toEndOf="@+id/pcategory"
+        app:layout_constraintStart_toStartOf="@+id/pcategory"
+        app:layout_constraintTop_toBottomOf="@+id/pcategory" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,8 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 
+import com.example.dbmsproject.ApiLink;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -29,7 +31,8 @@ public class BackgroundWorker extends AsyncTask<String, Void, String> {
     @Override
     protected String doInBackground(String... params) {
         String type = params[0];
-        String login_url = "http://192.168.44.208/login.php";
+        String link= ApiLink.link;
+        String login_url = link+"login.php";
         if (type.equals("login")) {
 
             try {

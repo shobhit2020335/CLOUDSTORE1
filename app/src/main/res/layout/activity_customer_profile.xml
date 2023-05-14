@@ -12,7 +12,11 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -122,7 +126,7 @@
                                         app:layout_constraintEnd_toEndOf="parent"
                                         app:layout_constraintStart_toStartOf="parent"
                                         app:layout_constraintTop_toTopOf="parent"
-                                        app:srcCompat="@drawable/img" />
+                                        app:srcCompat="@drawable/orders" />
 
                                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -131,7 +135,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="8dp"
-                                    android:text="Sample"
+                                    android:text="My Orders"
                                     android:textAlignment="center"
                                     android:textSize="16sp"
                                     android:textStyle="bold" />
@@ -171,7 +175,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="8dp"
-                                    android:text="Sample"
+                                    android:text="Cart"
                                     android:textAlignment="center"
                                     android:textSize="16sp"
                                     android:textStyle="bold" />
@@ -202,7 +206,7 @@
                                         app:layout_constraintEnd_toEndOf="parent"
                                         app:layout_constraintStart_toStartOf="parent"
                                         app:layout_constraintTop_toTopOf="parent"
-                                        app:srcCompat="@drawable/img" />
+                                        app:srcCompat="@drawable/logout" />
 
                                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -211,7 +215,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="8dp"
-                                    android:text="Sample"
+                                    android:text="LogOut"
                                     android:textAlignment="center"
                                     android:textSize="16sp"
                                     android:textStyle="bold" />
@@ -366,7 +370,7 @@
                             android:backgroundTint="#108CEF"
 
 
-                            android:text="Edit Profile" />
+                            android:text="Change Address" />
 
                     </LinearLayout>
 

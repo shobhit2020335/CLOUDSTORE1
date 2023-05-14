@@ -17,6 +17,51 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name="seller.myProducts"
+            android:exported="false" />
+        <activity
+            android:name="delieveryAgent.myDeliveries"
+            android:exported="false" />
+        <activity
+            android:name="delieveryAgent.agentUndeliveredOrders"
+            android:exported="false" />
+        <activity
+            android:name="delieveryAgent.agentHome"
+            android:exported="false" />
+        <activity
+            android:name=".employeeSelection"
+            android:exported="false" />
+        <activity
+            android:name="delieveryAgent.agentLogin"
+            android:exported="false" />
+        <activity
+            android:name="Employee.solveCustomerQueries"
+            android:exported="false" />
+        <activity
+            android:name="Employee.employeeMainpage"
+            android:exported="false" />
+        <activity
+            android:name="Employee.employeeLogin"
+            android:exported="false" />
+        <activity
+            android:name="customer.Query"
+            android:exported="false" />
+        <activity
+            android:name="customer.Cart"
+            android:exported="false" />
+        <activity
+            android:name="seller.addProduct"
+            android:exported="false" />
+        <activity
+            android:name="seller.sellerHome"
+            android:exported="false" />
+        <activity
+            android:name="customer.CustomerSignup2"
+            android:exported="false" />
+        <activity
+            android:name="customer.CustomerOrders"
+            android:exported="false" />
+        <activity
             android:name="customer.Trigger2"
             android:exported="false" />
         <activity

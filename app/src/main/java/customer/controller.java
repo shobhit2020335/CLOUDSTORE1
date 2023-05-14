@@ -1,10 +1,13 @@
 package customer;
 
+import com.example.dbmsproject.ApiLink;
+
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class controller {
-    public  static final String URL_LOGIN="http://192.168.44.208/api/";
+    static String link= ApiLink.link;
+    public  static final String URL_LOGIN=link;
 
     private static controller clienobject;
     private static Retrofit retrofit;

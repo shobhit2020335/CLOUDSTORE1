@@ -82,9 +82,10 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:textSize="20sp"
         android:background="@drawable/input_design"
+        android:onClick="onLogin"
         android:text="LOGIN"
+        android:textSize="20sp"
         app:backgroundTint="#E675AA"
         app:layout_constraintStart_toStartOf="@+id/inputpasswordlogin"
         app:layout_constraintTop_toBottomOf="@+id/inputpasswordlogin" />

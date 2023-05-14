@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:background="@drawable/input_design"
-        android:text="SIGN UP"
+        android:text="Next"
         android:textColor="#FFFFFF"
         app:backgroundTint="#E675AA"
         app:layout_constraintStart_toStartOf="@+id/inputpasswordsignup"

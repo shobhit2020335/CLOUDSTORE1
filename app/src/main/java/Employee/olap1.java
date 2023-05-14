@@ -6,6 +6,8 @@ import android.os.AsyncTask;
 import android.os.Looper;
 import android.util.Log;
 
+import com.example.dbmsproject.ApiLink;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -21,9 +23,11 @@ import java.util.ArrayList;
 import Product.ProductModel;
 
 public class olap1 extends AsyncTask<String, Void, String> {
-    public static final String link = "http://192.168.44.208/api/OLAP1.php";
+    static String lin= ApiLink.link;
+
+    public static final String link = lin+"OLAP1.php";
     Context context;
-//    private OnDataFetchedListener listener;
+
 
     ArrayList<olap1model> modelArrayList = new ArrayList<>();
 

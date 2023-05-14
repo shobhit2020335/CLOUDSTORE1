@@ -10,7 +10,7 @@
         android:id="@+id/buttone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="150dp"
+        android:layout_marginBottom="250dp"
         android:text="SIGNIN AS EMPLOYEE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,5 +26,15 @@
         app:layout_constraintEnd_toEndOf="@+id/buttone"
         app:layout_constraintStart_toStartOf="@+id/buttone"
         app:layout_constraintTop_toBottomOf="@+id/buttone" />
+
+    <Button
+        android:id="@+id/buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="SIGN IN AS SELLER"
+        app:layout_constraintEnd_toEndOf="@+id/buttonc"
+        app:layout_constraintStart_toStartOf="@+id/buttonc"
+        app:layout_constraintTop_toBottomOf="@+id/buttonc" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

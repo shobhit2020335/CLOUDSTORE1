@@ -1,10 +1,14 @@
 package customer;
 
+import com.example.dbmsproject.ApiLink;
+
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
-    public  static final String URL_LOGIN="http://192.168.44.208/api/";
+    static String link= ApiLink.link;
+
+    public  static final String URL_LOGIN=link;
     private static Retrofit retrofit=null;
     public static Retrofit getRetrofitInstance(){
         if (retrofit==null) {
